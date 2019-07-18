@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_cat.c                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmyrcell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/18 18:25:07 by tmyrcell          #+#    #+#             */
-/*   Updated: 2019/07/18 19:14:25 by tmyrcell         ###   ########.fr       */
+/*   Created: 2019/07/18 13:26:34 by tmyrcell          #+#    #+#             */
+/*   Updated: 2019/07/18 15:27:34 by tmyrcell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./../includes/ft.h"
 
-int		ft_cat(char *el)
+int		main(int ac, char **av)
 {
-	char	buf[BUFF_SIZE + 1];
-	int		len;
-	int		fd;
-
-	len = 0;
-	if ((fd = open(el, O_RDONLY)) == -1)
-		return (errno);
-	while ((len == read(fd, buf, BUFF_SIZE)) != 0)
-	{
-		buf[len] = '\0';
-		ft_putstr(buf);
-	}
-	close(fd);
+	ft_display_file(ac, av);
 	return (0);
 }

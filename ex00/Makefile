@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tmyrcell <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/07/18 18:37:08 by tmyrcell          #+#    #+#              #
-#    Updated: 2019/07/18 18:47:56 by tmyrcell         ###   ########.fr        #
+#    Created: 2019/07/18 14:31:51 by tmyrcell          #+#    #+#              #
+#    Updated: 2019/07/18 14:47:43 by tmyrcell         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft_cat
+NAME = ft_display_file
 
-SRCS = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_error.c srcs/main.c srcs/ft_cat.c
+SRCS = srcs/ft_putchar.c srcs/ft_putstr.c srcs/ft_display_file.c srcs/main.c
 
-OBJECTS = ft_putchar.o ft_putstr.o ft_error.o main.o ft_cat.o
+OBJECTS = ft_putchar.o ft_putstr.o ft_display_file.o main.o
 
 FLAGS = -Wall -Wextra -Werror -c -I
 

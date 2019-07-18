@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_error.c                                         :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmyrcell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/18 18:32:38 by tmyrcell          #+#    #+#             */
-/*   Updated: 2019/07/18 19:14:34 by tmyrcell         ###   ########.fr       */
+/*   Created: 2019/07/18 13:28:35 by tmyrcell          #+#    #+#             */
+/*   Updated: 2019/07/18 18:05:43 by tmyrcell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "./../includes/ft.h"
+#ifndef FT_H
+# define FT_H
 
-void	ft_error(char *el, int k)
-{
-	if (k != 0)
-	{
-		ft_putstr("cat: ");
-		ft_putstr(el);
-		ft_putstr(": ");
-		if (k == ENOENT)
-			ft_putstr("No such file or directory\n");
-	}
-}
+# include <unistd.h>
+# include <fcntl.h>
+# include <sys/types.h>
+# include <sys/stat.h>
+
+void			ft_putchar(char c);
+void			ft_putstr(char *str);
+void			ft_display_file(int ac, char **av);
+
+#endif
